@@ -11,5 +11,8 @@ package myinterface;
  * @author justinpotts
  */
 public interface HourlyEmployee extends Employee {
+    private double wage;
+    private double hours; 
+    
     
 }

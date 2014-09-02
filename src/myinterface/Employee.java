@@ -11,9 +11,9 @@ package myinterface;
  * @author justinpotts
  */
 public interface Employee {
-    String getName();
-    String getSsn();
-    String getJobTitle();
+    public String getName();
+    public String getSsn();
+    public String getJobTitle();
     
 
     public void setName(String name);

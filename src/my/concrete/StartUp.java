@@ -4,21 +4,12 @@
  * and open the template in the editor.
  */
 
-package myabstract;
+package my.concrete;
 
 /**
  *
  * @author justinpotts
  */
-public abstract class RunClass {
+public class StartUp {
+    
 }
-
-class Runclass extends Employee {
-
-    public Runclass(String name, String ssn, String jobTitle) {
-        super(name, ssn, jobTitle);
-        
-      
-    }
-}
-

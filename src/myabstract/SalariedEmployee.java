@@ -12,8 +12,28 @@ package myabstract;
  */
 public abstract class SalariedEmployee extends Employee{
 
-    public SalariedEmployee(String name, String ssn, String jobTitle) {
-        super(name, ssn, jobTitle);
+    public double getSalary() {
+        return salary;
     }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public double getPayRate() {
+        return payRate;
+    }
+
+    public void setPayRate(double payRate) {
+        this.payRate = payRate;
+    }
+
+   private double salary;
+   private double payRate;
+
+    public SalariedEmployee(int employeeNumber, String name) {
+        super(employeeNumber, name);
+    }
+   
     
 }

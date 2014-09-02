@@ -12,14 +12,20 @@ package myabstract;
  */
 public abstract class Employee {
 
+    private int employeeNumber;
     private String name;
-    private String ssn;
-    private String jobTitle;
 
-    public Employee(String name, String ssn, String jobTitle) {
+    public Employee(int employeeNumber, String name) {
+        this.employeeNumber = employeeNumber;
         this.name = name;
-        this.ssn = ssn;
-        this.jobTitle = jobTitle;
+    }
+
+    public int getEmployeeNumber() {
+        return employeeNumber;
+    }
+
+    public void setEmployeeNumber(int employeeNumber) {
+        this.employeeNumber = employeeNumber;
     }
 
     public String getName() {
@@ -30,24 +36,8 @@ public abstract class Employee {
         this.name = name;
     }
 
-    public String getSsn() {
-        return ssn;
-    }
-
-    public void setSsn(String ssn) {
-        this.ssn = ssn;
-    }
-
-    public String getJobTitle() {
-        return jobTitle;
-    }
-
-    public void setJobTitle(String jobTitle) {
-        this.jobTitle = jobTitle;
-    }
     
-    
-    
+
 
 }
 

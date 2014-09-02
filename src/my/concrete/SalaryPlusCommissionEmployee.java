@@ -16,11 +16,8 @@ public class SalaryPlusCommissionEmployee extends SalariedEmployee{
         private double  wage; 
         private double  commission;
 
-    public SalaryPlusCommissionEmployee() {
-        super (wage, name, employeeID, gender);
-        this.payRate = payRate;
-        this.wage = wage;
-        this.commission = commission;
+    public SalaryPlusCommissionEmployee(double payRate, double wage, String name, int employeeID, String gender) {
+        super(payRate, wage, name, employeeID, gender);
     }
 
     public double getCommission() {
@@ -30,6 +27,7 @@ public class SalaryPlusCommissionEmployee extends SalariedEmployee{
     public void setCommission(double commission) {
         this.commission = commission;
     }
+
 
         
 
