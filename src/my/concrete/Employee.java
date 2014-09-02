@@ -12,18 +12,15 @@ package my.concrete;
  */
 class Employee {
 
-    private String name;
-    private String wage;
-    private String jobTitle;
+    String name;
+    int employeeID;
+    String gender;
+    private double commission; 
 
-    public Employee(String name, String ssn, String jobTitle) {
+    public Employee(String name, int employeeID, String gender) {
         this.name = name;
-        this.wage = ssn;
-        this.jobTitle = jobTitle;
-    }
-
-    Employee(String justin_Potts_100111222_Owner) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.employeeID = employeeID;
+        this.gender = gender;
     }
 
     public String getName() {
@@ -34,22 +31,22 @@ class Employee {
         this.name = name;
     }
 
-    public String getWage() {
-        return wage;
+    public int getEmployeeID() {
+        return employeeID;
     }
 
-    public void setWage(String ssn) {
-        this.wage = ssn;
+    public void setEmployeeID(int employeeID) {
+        this.employeeID = employeeID;
     }
 
-    public String getJobTitle() {
-        return jobTitle;
+    public String getGender() {
+        return gender;
     }
 
-    public void setJobTitle(String jobTitle) {
-        this.jobTitle = jobTitle;
+    public void setGender(String Gender) {
+        this.gender = Gender;
     }
-    
+
     
     
 

@@ -11,16 +11,41 @@ package my.concrete;
  * @author justinpotts
  */
 public class HourlyEmployee extends Employee{
+    private double  payRate;
+    private double  hours;
+    private double  wage; 
 
-    public HourlyEmployee(String name, String wage, String jobTitle) {
-        super(name, wage, jobTitle);
+    public HourlyEmployee(double payRate, double hours, double wage, String name, int employeeID, String gender) {
+        super(name, employeeID, gender);
+        this.payRate = payRate;
+        this.hours = hours;
+        this.wage = wage;
+    }
+
+    public double getPayRate() {
+        return payRate;
+    }
+
+    public void setPayRate(double payRate) {
+        this.payRate = payRate;
+    }
+
+    public double getHours() {
+        return hours;
+    }
+
+    public void setHours(double hours) {
+        this.hours = hours;
+    }
+
+    public double getWage() {
+        return wage;
+    }
+
+    public void setWage(double wage) {
+        this.wage = wage;
+    }
     
-        
-     Employee e1 = new Employee ("Justin Potts, $42.00, Owner"){
-     
-     system.out.println("The salary for " + e1 + "is " + wage);
-    
-    
-     };
-}
+
+
 }
