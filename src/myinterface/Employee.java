@@ -1,22 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package myinterface;
 
 /**
- *
- * @author justinpotts
+ * @author Justin Potts
  */
 public interface Employee {
-    public String getName();
-    public String getSsn();
-    public String getJobTitle();
-    
 
-    public void setName(String name);
-    public void setSsn(String ssn);
-    public void setJobTitle(String jobTitle);
+    public static final int MAX_HOURS_PER_WEEK = 50;
+    
+ 
+    public abstract double getAnnualWages();
+    
+    public abstract String getLastName();
+
+    public abstract void setLastName(String lastName);
+
+    public abstract String getFirstName();
+
+    public abstract void setFirstName(String firstName);
+
+    public abstract String getSsn();
+
+    public abstract void setSsn(String ssn);
+    
 }

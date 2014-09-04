@@ -1,42 +1,36 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package my.concrete;
 
 /**
- *
- * @author justinpotts
+ * 
+ * 
+ * @author Justin Potts
  */
 public class SalariedEmployee extends Employee {
+  
+    private double monthlySalary;
+    private double annualBonus;
+    
 
-    private double  payRate;
-    private double  wage; 
-
-    public SalariedEmployee(double payRate, double wage, String name, int employeeID, String gender) {
-        super(name, employeeID, gender);
-        this.payRate = payRate;
-        this.wage = wage;
+    @Override
+    public double getAnnualWages() {
+        return monthlySalary * 12 + annualBonus;
+    }
+    
+   
+    public double getMonthlySalary() {
+        return monthlySalary;
     }
 
-    public double getPayRate() {
-        return payRate;
+    public void setMonthlySalary(double monthlySalary) {
+        this.monthlySalary = monthlySalary;
     }
 
-    public void setPayRate(double payRate) {
-        this.payRate = payRate;
+    public double getAnnualBonus() {
+        return annualBonus;
     }
 
-    public double getWage() {
-        return wage;
+    public void setAnnualBonus(double annualBonus) {
+        this.annualBonus = annualBonus;
     }
-
-    public void setWage(double wage) {
-        this.wage = wage;
-    }
-
-
     
 }

@@ -1,51 +1,48 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package my.concrete;
 
 /**
+ * 
  *
- * @author justinpotts
+ * @author Justin Potts
  */
-public class HourlyEmployee extends Employee{
-    private double  payRate;
-    private double  hours;
-    private double  wage; 
+public class HourlyEmployee extends Employee {
+  
+    private double hourlyRate;
+    private double hoursPerWeek;
+    private double overtimeHoursPerWeek;
+    private static final double OVERTIME_MULTIPLIER = 1.5;
+    
 
-    public HourlyEmployee(double payRate, double hours, double wage, String name, int employeeID, String gender) {
-        super(name, employeeID, gender);
-        this.payRate = payRate;
-        this.hours = hours;
-        this.wage = wage;
-    }
-
-    public double getPayRate() {
-        return payRate;
-    }
-
-    public void setPayRate(double payRate) {
-        this.payRate = payRate;
-    }
-
-    public double getHours() {
-        return hours;
-    }
-
-    public void setHours(double hours) {
-        this.hours = hours;
-    }
-
-    public double getWage() {
-        return wage;
-    }
-
-    public void setWage(double wage) {
-        this.wage = wage;
+    @Override
+    public double getAnnualWages() {
+        return (hourlyRate * hoursPerWeek
+                + overtimeHoursPerWeek * OVERTIME_MULTIPLIER)
+                * 52;
     }
     
 
+    public double getHourlyRate() {
+        return hourlyRate;
+    }
 
+    public void setHourlyRate(double hourlyRate) {
+        this.hourlyRate = hourlyRate;
+    }
+
+    public double getHoursPerWeek() {
+        return hoursPerWeek;
+    }
+
+    public void setHoursPerWeek(double hoursPerWeek) {
+        this.hoursPerWeek = hoursPerWeek;
+    }
+
+    public double getOvertimeHoursPerWeek() {
+        return overtimeHoursPerWeek;
+    }
+
+    public void setOvertimeHoursPerWeek(double overtimeHoursPerWeek) {
+        this.overtimeHoursPerWeek = overtimeHoursPerWeek;
+    }
+    
 }

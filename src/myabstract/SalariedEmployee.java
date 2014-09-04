@@ -1,39 +1,33 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package myabstract;
 
 /**
- *
- * @author justinpotts
+ * 
+ * @author Justin Potts
  */
-public abstract class SalariedEmployee extends Employee{
+public class SalariedEmployee extends Employee {
+    
+    private double monthlySalary;
+    private double annualBonus;
 
-    public double getSalary() {
-        return salary;
+    @Override
+    public double getAnnualWages() {
+        return monthlySalary * 12 + annualBonus;
+    }
+    
+    public double getMonthlySalary() {
+        return monthlySalary;
     }
 
-    public void setSalary(double salary) {
-        this.salary = salary;
+    public void setMonthlySalary(double monthlySalary) {
+        this.monthlySalary = monthlySalary;
     }
 
-    public double getPayRate() {
-        return payRate;
+    public double getAnnualBonus() {
+        return annualBonus;
     }
 
-    public void setPayRate(double payRate) {
-        this.payRate = payRate;
+    public void setAnnualBonus(double annualBonus) {
+        this.annualBonus = annualBonus;
     }
-
-   private double salary;
-   private double payRate;
-
-    public SalariedEmployee(int employeeNumber, String name) {
-        super(employeeNumber, name);
-    }
-   
     
 }

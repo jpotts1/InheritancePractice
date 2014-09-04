@@ -1,43 +1,46 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package myabstract;
 
-
-
 /**
- *
- * @author justinpotts
+ * @author Justin Potts
  */
-public abstract class HourlyEmployee extends Employee{
+public class HourlyEmployee extends Employee {
     
-   private double hoursWorked;
-   private double hourlyWage;
-
-    public HourlyEmployee(double hoursWorked, double hourlyWage, int employeeNumber, String name) {
-        super(employeeNumber, name);
-        this.hoursWorked = hoursWorked;
-        this.hourlyWage = hourlyWage;
+    private double hourlyRate;
+    private double hoursPerWeek;
+    private double overtimeHoursPerWeek;
+    private static final double OVERTIME_MULTIPLIER = 1.5;
+    
+ 
+    @Override
+    public double getAnnualWages() {
+        return (hourlyRate * hoursPerWeek
+                + overtimeHoursPerWeek * OVERTIME_MULTIPLIER)
+                * 52;
+    }
+    
+ 
+    public double getHourlyRate() {
+        return hourlyRate;
     }
 
-    public double getHoursWorked() {
-        return hoursWorked;
+    public void setHourlyRate(double hourlyRate) {
+        this.hourlyRate = hourlyRate;
     }
 
-    public void setHoursWorked(double hoursWorked) {
-        this.hoursWorked = hoursWorked;
+    public double getHoursPerWeek() {
+        return hoursPerWeek;
     }
 
-    public double getHourlyWage() {
-        return hourlyWage;
+    public void setHoursPerWeek(double hoursPerWeek) {
+        this.hoursPerWeek = hoursPerWeek;
     }
 
-    public void setHourlyWage(double hourlyWage) {
-        this.hourlyWage = hourlyWage;
+    public double getOvertimeHoursPerWeek() {
+        return overtimeHoursPerWeek;
     }
 
+    public void setOvertimeHoursPerWeek(double overtimeHoursPerWeek) {
+        this.overtimeHoursPerWeek = overtimeHoursPerWeek;
+    }
     
 }
